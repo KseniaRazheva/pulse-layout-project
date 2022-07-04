@@ -1,4 +1,4 @@
-@import 'base/_variables';
+@import 'base/variables';
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
@@ -9,6 +9,9 @@
     margin: 0 auto;
 }
 
-@import 'blocks/_promo';
+@import 'blocks/promo';
 @import 'blocks/header.scss';
 @import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/titles';
+@import 'blocks/media';
