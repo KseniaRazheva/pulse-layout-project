@@ -5,6 +5,10 @@
         margin-top: 65px;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            margin: 40px 10px 0 10px;
+        }
     }
 
     &__item {
