@@ -11,8 +11,8 @@ $(document).ready(function(){
 		// arrows: false, убрать стрелочки
 		// adaptiveHeight: true,   подстраивается под разную высоту картинок
 		speed: 1200, // скорость переключения слайдов в миллисекундах
-		prevArrow: '<button type="button" class="slick-prev"><img src="../icons/left.svg"></button>', // стрелочка слева
-		nextArrow: '<button type="button" class="slick-next"><img src="../icons/right.svg"></button>', // стрелочка справа
+		prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>', // стрелочка слева
+		nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>', // стрелочка справа
 		responsive: [
 			{
 				breakpoint: 992, // правила работают от 0 до 768px
