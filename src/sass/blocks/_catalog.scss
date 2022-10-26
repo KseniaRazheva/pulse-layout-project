@@ -1,0 +1,39 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px; // межстрочный интервал почти как высота тэба
+        transform: skewX(-25deg); // повернуть по оси х на 25 degree (25 градусов)
+        margin: 0 5px;
+        cursor: pointer; // курсор
+        transition: 0.5s all; // свойство анимация плавная 
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;  // свойство тень элемента при наведении смещение по х у вправо и вниз (отрицательное значение влево и вверх), размытие, цвет
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            color: #ffffff;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+}
