@@ -83,8 +83,21 @@
             // height: 1px; не подходит для тега hr, высота полосочки задается border
             border-bottom: none; 
         }
-        // &__footer {
-            
-        // }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through; // зачеркнутый текст
+        }
+        &__price {
+            color: #050505;
+            font-size: 20px;
+            font-weight: 700;
+        }
     }
 }
