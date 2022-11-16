@@ -66,5 +66,44 @@ $(document).ready(function(){
 		$(this)
 		.addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
 		.closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
-	});
+	}); // скрипт для табов (вкладок)
+
+//	$('.catalog-item__link').each(function(i) {
+//		$(this).on('click', function(e) {
+//			e.preventDefault();
+//			$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+//			$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+//		})
+//	});  // неоптимизмизированный скрипт для кнопки подробнее
+
+//	$('.catalog-item__back').each(function(i) { // класс ссылки, перебор ссылок
+//		$(this).on('click', function(e) { // буду кликать на эту ссылку
+//			e.preventDefault(); // отменяю стандартное поведение браузера
+//			$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+//			$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active'); // переключение классов: если не активен - станет активным(класс будет добавляться), если активный - станет не активным(класс будет убираться)
+//		})
+//	});  // неоптимизмизированный скрипт для кнопки назад
+
+
+	function toggleSlide(item) { // функция с аргументом item
+		$(item).each(function(i) { // там где меняется класс - item 
+			$(this).on('click', function(e) {
+				e.preventDefault();
+				$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+				$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+			})
+		});
+	};
+
+	toggleSlide('.catalog-item__link'); // возьму функцию и во внутрь передам класс ссылки который надо переключать 
+	toggleSlide('.catalog-item__back'); // оптимизированный скрипт для кнопок подробнее и назад
 });
+// ('.class')
+// .each - метод (перебор каждого элемента (для каждой ссылки подробнее из каждой карточки) [function=что будет происходить при переборе элементов?]
+// (i-определенный аргумент который мне понадобится)   
+// на каждую ссылку я буду кликать (метод .on)) [function=и что будет происходить после этого клика?] 
+// стандартное поведение браузера - когда пользователь кликает по ссылке он переходит по определенномк адресу
+// отменить стандартное поведение можно командой e.preventDefault - не переходить по ссылкам по определенному адресу, а выполняли какие-то другие действия (чтобы это сработало, внутри функции нужно прописать е)
+// логическое выражение: я получаю блок с классом catalog-item__content. при клике у меня переключается класс (toggleClass) [если класс есть - он убирается, если класса нет - он добавляется]
+// команда .eq позволяет получать элемент по определенному индексу (по порядку) берем все ссылки что есть на странице: перебираем i=1 и при клике на 1 ссылку будут меняться классы первого элементами [если его не поставит, то все ссылки нажимаются одновременно]
+
