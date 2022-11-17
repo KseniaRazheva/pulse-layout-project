@@ -8,6 +8,9 @@
         align-items: center;
         padding-left: 0;
         margin-bottom: 0;
+        @media (max-width: 320px) {
+            padding: 0 20px 0 20px;
+        }
     }
     &__tab {
         width: 220px;
@@ -35,6 +38,9 @@
             background-color: $main-color;
             border: none;
         }
+        @media (max-width: 320px) {
+            font-size: 8px;
+        }
     }
     &__content {
         margin-top: 60px;
@@ -43,6 +49,9 @@
         flex-wrap: wrap; // чтобы не помещающиеся карточки сдвигались вниз
         &_active {
             display: flex;
+        }
+        @media (max-width: 320px) {
+            padding: 0 20px 0 20px;
         }
     }
     &-item {
@@ -57,6 +66,9 @@
             margin: 0 auto; //  поставить картинку по середине
             max-width: 100%;
             height: 200px;
+            @media (max-width: 320px) {
+                height: 100px;
+            }
         }
         &__subtitle {
             margin-top: 20px;
@@ -107,6 +119,9 @@
             color: #050505;
             font-size: 20px;
             font-weight: 700;
+            @media (max-width: 320px) {
+                font-size: 10px;
+            }
         }
         &__wrapper {
             display: flex;
