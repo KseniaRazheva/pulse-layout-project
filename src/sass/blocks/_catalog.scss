@@ -90,11 +90,13 @@
             color: $main-color;
             font-size: 14px;
             font-weight: 500;
-            text-decoration: underline;
+            text-decoration: none;// не подчеркивать снизу
             text-align: center;
             text-transform: uppercase;
             &:hover {
                 color: $main-color;
+                text-decoration: underline; // подчеркнуть снизу
+
             }
         }
         hr {
@@ -177,10 +179,11 @@
             color: $main-color;
             font-size: 14px;
             font-weight: 500;
-            text-decoration: underline; // подчеркнуть снизу
+            text-decoration: none; // не подчеркивать снизу
             text-transform: uppercase; // верхний регистр текста
             &:hover {
                 color: $main-color;
+                text-decoration: underline; // подчеркнуть снизу
             }
         }
     }

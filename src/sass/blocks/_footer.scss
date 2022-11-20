@@ -1,0 +1,63 @@
+.footer {
+    height: 630px;
+    position: relative;
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 270px;
+        background-color: $main-color;
+        padding: 50px 68px 60px 68px;
+    }
+    &__addr {
+        margin-bottom: 36px;
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 20px; // текст занимает только строку, применимо только для надписей которые идут в одну строку.
+        font-weight: 500;
+        text-align: center;
+        @media (max-width: 320px) {
+            font-size: 15px;
+            line-height: 15px; // текст занимает только строку, применимо только для надписей которые идут в одну строку. 
+        }
+    }
+    &__phone {
+        display: block; // у тега a свойство display: inline, чтобы поставить ее по центру с помощу text-align надо превратить ее в блочный элемент.
+        margin-bottom: 38px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none; // не подчеркивать снизу
+        &:hover {
+            color: #ffffff;
+            text-decoration: underline; // подчеркнуть снизу
+        }
+
+    }
+    &__social-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        margin: 0 15px;
+        img {
+            height: 27px;
+        }
+        &:hover {
+            box-shadow: 3px 3px 20px #ffffff;  // свойство тень элемента при наведении смещение по х у вправо и вниз (отрицательное значение влево и вверх), размытие, цвет
+            border: none;
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

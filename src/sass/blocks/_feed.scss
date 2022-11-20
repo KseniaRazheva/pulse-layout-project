@@ -1,21 +1,44 @@
 .feed {
     padding-bottom: 71px;
+    @media (max-width: 320px) {
+    padding-bottom: 40px;
+    }
     &__title {
         margin-bottom: 70px;
+        @media (max-width: 320px) {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
     }
     &__item {
         display: flex;
-        &:not(:last-child) {
-            margin-bottom: 100px;
+            &:not(:last-child) {
+                margin-bottom: 100px;
+                @media (max-width: 320px) {
+                    margin-bottom: 40px;
+                }
+        }
+        @media (max-width: 320px) {
+            display: block; 
         }
     }
     &__img {
         width: 169px;
         height: 169px;
+        @media (max-width: 320px) {
+            margin-top: 0px;
+            margin-right: 67px;
+            margin-bottom: 20px;
+            margin-left: 67px;
+        }
     }
     &__text {
         margin-left: 62px;
         padding-right: 60px;
+        @media (max-width: 320px) {
+            margin: 0px 30px;
+            padding-right: 0px;
+        }
     }
     &__subtitle {
         color: #0d0d0d;
@@ -26,11 +49,11 @@
         color: #646464;
         font-size: 14px;
         font-weight: 500;
+        margin-bottom: 10px;
     }
     &__descr {
         color: #0d0d0d;
         font-size: 16px;
         font-weight: 300;
-        margin-top: 10px;
     }
 }
