@@ -171,4 +171,28 @@ $(document).ready(function () {
 
   // Mask
   $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  //Mailer не работает
+  $('form').submit(function(e) {
+    e.preventDefault();
+    
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      // url: "mailer/smart.php",
+      // url: "nodejs-mail-sender/static/nodemailer.js",
+      // url: "http://localhost:3001/api/sendmail",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
 });
