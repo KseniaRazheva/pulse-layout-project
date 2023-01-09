@@ -195,4 +195,20 @@ $(document).ready(function () {
     return false;
   });
 
+  // Smooth scroll and padeup
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+     $('.pageup').fadeOut();
+    }
+  }); // элемент вверх появляется если проскролить 1600px и поднимает вверх страницы
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  }); // для плавной прокрутки, но браузер и без этой части скрипта плавно прокручивает
+
 });
