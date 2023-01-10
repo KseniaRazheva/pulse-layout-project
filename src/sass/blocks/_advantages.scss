@@ -27,6 +27,19 @@
     &__icon {
         width: 70px;
         height: 70px;
+        &_animated {
+            animation-name: heartbeat; // название анимации
+            animation-duration: 1.5s; // продолжительность анимации
+            animation-timing-function: ease; // временная функция. начинается медленно, разгоняется быстро и замедляется в конце
+            animation-iteration-count: infinite; // повтор анимации. проигрывается бесконечно
+
+            // Краткая запись анимации: animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction;
+            // например: 
+            // animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
     }
 
     &__subtitle {
